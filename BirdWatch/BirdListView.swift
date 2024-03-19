@@ -13,6 +13,7 @@ struct BirdListView: View {
         List(birds, id: \.self) { bird in
             birdInfoRow(bird)
         }
+        .navigationTitle("Birds List")
     }
 
     private func birdInfoRow(_ bird: Bird) -> some View {

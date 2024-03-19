@@ -10,10 +10,17 @@ import SwiftUI
 struct ContentView: View {
 
     var body: some View {
-        VStack(spacing: 50) {
-            profileView
+        NavigationStack {
+            VStack(spacing: 50) {
+                profileView
 
-            viewBirdsButton
+                NavigationLink {
+                    BirdListView()
+                } label: {
+                    viewBirdsButton
+                }
+            }
+            .navigationTitle("Bird Watch")
         }
     }
 
